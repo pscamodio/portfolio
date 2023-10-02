@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgreen;
+    color: lightgray;
+}
+
+.links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.links li {
+    border: 1px solid black;
+    background-color: black;
+    padding: 0.5rem;
+    border-radius: 10%;
+}
