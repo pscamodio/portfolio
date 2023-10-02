@@ -1,9 +1,3 @@
-import styles from './page.module.css'
-
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div>Hero Section</div>
-    </main>
-  )
+  return <div>Hero Section</div>;
 }
