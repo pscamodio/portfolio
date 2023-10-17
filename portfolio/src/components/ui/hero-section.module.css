@@ -1,0 +1,15 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    width: "100%";
+    gap: 2rem;
+    justify-content: center;
+}
+
+.section aside {
+    width: 50%;
+}
+
+.section img {
+    border-radius: 20%;
+}
