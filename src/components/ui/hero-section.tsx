@@ -5,7 +5,7 @@ export function HeroSection() : JSX.Element {
     return <section className={classes.section}>
         <aside>
             Hi, <br/>
-            I'm Amodio Pesce, a software engineer and a technology enthusiast from Italy.
+            I&apos;m Amodio Pesce, a software engineer and a technology enthusiast from Italy.
         </aside>
         <div>
             <Image 
