@@ -1,2 +1,4 @@
 tasks:
-    - init: npm install
+    - before: cd portfolio
+      init: npm install
+      command: npm run dev
