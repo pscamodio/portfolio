@@ -6,7 +6,7 @@ export function Header() {
         <Link href="/">Amodio Pesce</Link>
         <nav>
             <ul className={classes.links}>
-                <Link href="/about">About Me</Link>
+                <Link href="/projects">Projects</Link>
                 <Link href="/contact">Contact</Link>
             </ul>
         </nav>
