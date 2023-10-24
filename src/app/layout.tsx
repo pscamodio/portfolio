@@ -5,7 +5,7 @@ import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import { Header } from '@/components/layout/header'
 
-const inter = Noto_Sans({ weight: "400", subsets: ["latin"] });
+const inter = Noto_Sans({ weight: ["400", "600", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: 'Amodio Pesce',
