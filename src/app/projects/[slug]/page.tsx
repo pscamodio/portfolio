@@ -1,15 +1,20 @@
-import { loadProject } from "@/utils/projects";
+import { allProjects, loadProject } from "@/utils/projects";
 import Image from "next/image";
 import classes from "./page.module.css";
 import Head from "next/head";
 import { Metadata, ResolvingMetadata } from "next";
+import { notFound } from "next/navigation";
 
 type HomeProps = {
     params: { slug: string }
 }
 
 export default async function Home({ params }: HomeProps) {
-    const { title, thumbnail, content } = await loadProject(params.slug);
+    const project = await loadProject(params.slug);
+    if (!project) {
+        return notFound();
+    }
+    const { title, thumbnail, content } = project;
     return <>
         <Head>
             <title>title</title>
@@ -41,8 +46,16 @@ export async function generateMetadata(
     { params }: HomeProps,
     parent: ResolvingMetadata
 ): Promise<Metadata> {
-    const { title } = await loadProject(params.slug);
+    const project = await loadProject(params.slug);
     return {
-        title
+        title: project?.title ?? (await parent).title
     }
 }
+
+export async function generateStaticParams() {
+    const posts = await allProjects();
+   
+    return posts.map((post) => ({
+      slug: post,
+    }))
+  }
