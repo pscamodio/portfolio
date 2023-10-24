@@ -10,6 +10,8 @@ const inter = Noto_Sans({ weight: "400", subsets: ["latin"] });
 export const metadata: Metadata = {
   title: 'Amodio Pesce',
   description: 'Amodio portfolio',
+  // TODO: Remove this when the website should be public indexable
+  robots: "noindex",
 }
 
 export default function RootLayout({
